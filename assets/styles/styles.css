@@ -369,15 +369,10 @@ nav ul{
     margin-bottom: 24px;
 }
 
-.road-map__container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
 .steps-cards{
+    scroll-snap-align: unset;
     width: 100%;
+    height: 176px;
     max-width: calc( 50vw - 8px );
 }
 
@@ -501,34 +496,92 @@ nav{
 }
 
 .road-map h2{
-    text-align: left;
-}
-
-.road-map__container{
-/*     display: flex;
-    gap: 16px;
-    flex-wrap: wrap; */
-    display: unset;
-    flex-wrap: unset;
+    text-align: center;
 }
 
 .road-map__container{
     all: unset;
+/*     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
 
-    display: grid;
+    border: 1px red solid; */
+    
+
+/*     display: grid;
+    overflow-x: hidden;
     overflow: hidden;
     
     gap: 1rem;
     grid-auto-rows: 136px;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 306px), 1fr));
-    padding: 4px 0;
+    padding: 4px 0; */
 }
 
 .steps-cards{
-    flex-basis: 306px;
-    flex-shrink: .5;
-    /* flex-grow: 1; */
+    /* flex-basis: 306px; */
+    /* max-width: 250px; */
+    /* border: 1px red solid; */
+/*     flex-shrink: .5;
+    flex-grow: 1; */
 }
+
+
+
+
+
+
+
+
+
+.road-map__container{
+    scroll-snap-type: none;
+    overflow-x: hidden;
+    display: flex;
+    gap: 16px;
+    padding: 4px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+}
+
+
+/* Steps Cards */
+
+.steps-cards{
+    min-width: 306px;
+    /* border: 1px red solid; */
+    flex-basis: 306px;
+    max-width: calc(25% - 124px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
