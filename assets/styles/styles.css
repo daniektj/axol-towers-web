@@ -118,6 +118,12 @@ nav ul{
 
 /* Social Cards */
 
+.hero__social-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .social-cards{
     display: flex;
     gap: 16px;
@@ -133,6 +139,8 @@ nav ul{
    display: flex;
    gap: 8px;
 }
+
+
 
 
 
@@ -161,6 +169,12 @@ nav ul{
     font-size: 32px;
     text-align: center;
     margin-bottom: 24px;
+}
+
+.road-map__container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .steps-cards{
@@ -278,41 +292,43 @@ footer{
 
 @media (min-width: 700px) {
 
-    nav{
-        margin-top: 24px;
-        padding: 0 40px;
-        justify-content: space-between;
-    }
 
-    nav ul{
-        display: flex;
-        gap: 32px;
-        justify-content: space-between;
-        align-items: center;
-    }
+nav{
+    margin-top: 24px;
+    padding: 0 40px;
+    justify-content: space-between;
+}
 
-
-
-    .hero{
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    .project__info{
-        justify-content: center;
-    }
-
-    .project__image{
-        display: inline;
-    }
-    
-    .social-cards{
-        max-width: calc( 50vw - 8px );
-    }
+nav ul{
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
-    /* Featured Cards */
+
+.hero{
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project__info{
+    justify-content: center;
+}
+
+.project__image{
+    height: auto;
+    display: inline;
+}
+
+.social-cards{
+    max-width: calc( 50vw - 8px );
+}
+
+
+/* Featured Cards */
 
 .featured{
     flex-direction: row;
@@ -331,6 +347,10 @@ footer{
 
 /* Steps Cards */
 
+.road-map{
+    /* max-width: calc(1440px - 144px); */
+}
+
 .road-map h2{
     font-size: 32px;
     text-align: center;
@@ -339,10 +359,13 @@ footer{
 
 .road-map__container{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
 }
 
 .steps-cards{
+    width: 100%;
     max-width: calc( 50vw - 8px );
 }
 
@@ -352,8 +375,9 @@ footer{
     right: 16px;
 }
 
-
-
+.hero__social-cards{
+    flex-direction: row;
+}
 
 
 
@@ -361,13 +385,19 @@ footer{
 
 
 /* Tokens Section */
+
+.tokens{
+    width: 100%;
+    padding: 0 72px;
+    margin: auto;
+}
+
 .tokens__title-container{
     display: flex;
     align-items: center;
     gap: 16px;
     align-items: center;
 }
-
 
 
 
@@ -390,14 +420,134 @@ footer{
 }
 
 
-
-
-
-
-
+}
 
 
     
+@media (min-width: 1080px) {
+
+/* Hero */
+
+nav{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.hero{
+    max-width: 1440px;
+    flex-wrap: nowrap;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.project{
+    max-width: 856px;
+}
+
+.hero__social-cards{
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-cards{
+    min-height: calc( 50% - 8px );
+}
+
+
+
+
+/* Featured Cards */
+
+.featured{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.featured-01{
+    /* max-width: 416px; */
+}
+.featured-02{
+    /* flex-grow: 1; */
+    width: 900px;
+}
     
+
+
+/* Steps Cards */
+
+.road-map{
+    width: 100vw;
+    max-width: 1440px;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.road-map h2{
+    text-align: left;
+}
+
+.road-map__container{
+/*     display: flex;
+    gap: 16px;
+    flex-wrap: wrap; */
+    display: unset;
+    flex-wrap: unset;
+}
+
+.road-map__container{
+    all: unset;
+
+    display: grid;
+    overflow: hidden;
+    
+    gap: 1rem;
+    grid-auto-rows: 136px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 306px), 1fr));
+    padding: 4px 0;
+}
+
+.steps-cards{
+    flex-basis: 306px;
+    flex-shrink: .5;
+    /* flex-grow: 1; */
+}
+
+
+
+
+/* Tokens Section */
+
+.tokens{
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+
+
+/* Team Cards */
+
+.team{
+    padding: 0 72px;
+}
+
+.team h2{
+    text-align: center;
+}
+
+.team__cards{
+    justify-content: center;
+}
+
+.team-cards{
+    width: 306px;
+}
+
 
 }
