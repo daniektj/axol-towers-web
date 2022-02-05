@@ -187,6 +187,12 @@ nav ul{
 
 /* Steps Cards */
 
+.done{box-shadow: 0px 4px 0px #703EFF;}
+.doing{box-shadow: 0px 4px 0px #BF4F2C;}
+.waiting{box-shadow: 0px 4px 0px #818EB9;}
+
+
+
 .steps-cards{
     scroll-snap-align: center;
     min-width: 75vw;
@@ -202,7 +208,7 @@ nav ul{
     position: relative;
 
     background: linear-gradient(180deg, #242732 15.62%, #303750 100%);
-    box-shadow: 0px 4px 0px #703EFF;
+    /* box-shadow: 0px 4px 0px #703EFF; */
     border-radius: 24px;
 }
 
