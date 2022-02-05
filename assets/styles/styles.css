@@ -163,7 +163,7 @@ nav ul{
 
 
 
-/* Steps Cards */
+/* Road map*/
 
 .road-map h2{
     font-size: 32px;
@@ -172,12 +172,24 @@ nav ul{
 }
 
 .road-map__container{
-    display: flex;
+/*     display: flex;
     flex-direction: column;
+    gap: 16px; */
+}
+.road-map__container{
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
     gap: 16px;
+    padding: 4px;
 }
 
+
+/* Steps Cards */
+
 .steps-cards{
+    scroll-snap-align: center;
+    min-width: 75vw;
     min-height: 136px;
     display: flex;
     flex-direction: column;
