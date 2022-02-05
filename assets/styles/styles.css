@@ -97,8 +97,9 @@ nav ul{
     background: var(--color-primary);
 }
 .project__buttons--solid:hover{
-    border: 1px var(--color-primary) solid;
-    background: transparent;
+    background: white;
+    border: 0;
+    color: var(--color-primary);
 }
 
 .project__buttons--outline{
@@ -107,8 +108,9 @@ nav ul{
 }
 
 .project__buttons--outline:hover{
-    background: var(--color-primary);
+    background: white;
     border: 0;
+    color: var(--color-primary);
 }
 
 .project__image{
