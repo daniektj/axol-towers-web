@@ -40,7 +40,26 @@ nav{
 nav ul{
     display: flex;
     list-style-type: none;
-    display: none;
+    /* display: none; */
+}
+
+nav ul a{
+    font-size: 1.25rem;
+    color: var(--color-titles);
+    text-decoration: none;
+}
+
+nav ul a:hover{
+    color: var(--color-primary);
+}
+
+h2 a{
+    color: var(--color-titles);
+    text-decoration: none;
+}
+
+h2 a:hover{
+    text-decoration: underline;
 }
 
 
