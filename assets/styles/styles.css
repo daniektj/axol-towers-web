@@ -177,7 +177,7 @@ nav ul{
     gap: 16px; */
 }
 .road-map__container{
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     overflow-x: scroll;
     display: flex;
     gap: 16px;
