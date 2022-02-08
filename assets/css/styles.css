@@ -1,0 +1,782 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --background: #202128;
+    --color-blue-dark: #242732;
+    --color-primary: #7B4CFF;
+    --color-body-text: #818EB9;
+    --color-titles: #fff;
+    --color-footer: #191A1F;
+    --font-body: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h1, h2, h3, h4, h5{
+    color: var(--color-titles);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+    background: var(--background);
+    color: var(--color-body-text);
+    font-family: var(--font-body);
+}
+
+
+
+
+
+nav{
+    width: 100vw;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 0px;
+    padding: 0 32px;
+    position: fixed;
+    z-index: 3;
+
+    backdrop-filter: blur(8px);
+    background-color: #1a1b2080;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 8px 8px;
+    border: 0px rgba(255,255,255,0.4) solid;
+/*     border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid; */
+}
+
+nav img{
+    height: 32px;
+}
+
+
+/* This was made with GlassGenerator.netlify.app */ 
+
+
+
+
+
+
+
+
+.header__burger{
+    width: 60px;
+    height: 40px;
+    background: transparent url('../images/burger-icon.svg') no-repeat center;
+    border: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+
+.mobile-nav{
+    width: 55vw;
+    height: 100vh;
+    background: #15161B;
+    padding: 32px;
+    padding-top: 128px;
+
+    position: fixed;
+    top: 64px;
+    right: 0;
+    transition: all 1s;
+    z-index: 2;
+}
+
+.mobile-nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
+}
+
+.mobile-nav ul a{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-body-text);
+    text-decoration: none;
+}
+
+.mobile-nav-animation{
+    transition: transform 1s;
+    transform: translate(60vw, 0%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+} */
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    /* display: none; */
+}
+
+nav ul a{
+    font-size: 1.25rem;
+    color: var(--color-titles);
+    text-decoration: none;
+}
+
+nav ul a:hover{
+    color: var(--color-primary);
+}
+
+h2 a{
+    color: var(--color-titles);
+    text-decoration: none;
+}
+
+h2 a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+nav ul{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 102px;
+    padding: 0 24px;
+}
+
+.project{
+    display: flex;
+    background: linear-gradient(180deg, #242732 35.42%, #303750 100%);
+    border-radius: 24px;
+    padding: 16px 40px;
+}
+
+.project__container{
+    display: flex;
+}
+
+.project__info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project__butttons {
+    display: flex;
+    gap: 16px;
+}
+
+.project__butttons a{
+    min-width: 140px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: var(--color-titles);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px 24px;
+    height: 44px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.project__buttons--solid{
+    background: var(--color-primary);
+}
+.project__buttons--solid:hover{
+    background: white;
+    border: 0;
+    color: var(--color-primary);
+}
+
+.project__buttons--outline{
+    background: transparent;
+    border: 1px var(--color-primary) solid;
+}
+
+.project__buttons--outline:hover{
+    background: white;
+    border: 0;
+    color: var(--color-primary);
+}
+
+.project__image{
+    display: none;
+}
+
+
+/* Social Cards */
+
+.hero__social-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.social-cards{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    height: 144px;
+    background: var(--color-blue-dark);
+    border: 1px solid #373F5C;
+    border-radius: 24px;
+    padding: 16px 24px;
+}
+.social-cards__container{
+   display: flex;
+   gap: 8px;
+}
+
+
+
+
+
+
+/* Featured Cards */
+
+.featured{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.featured-cards{
+    background: linear-gradient(180deg, #242732 15.62%, #303750 100%);
+    box-shadow: 0px -8px 0px #7B4CFF;
+    border-radius: 24px;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.featured-cards__image{
+    max-width: 80%;
+}
+
+
+
+
+/* Road map*/
+
+.road-map h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.road-map__container{
+/*     display: flex;
+    flex-direction: column;
+    gap: 16px; */
+}
+.road-map__container{
+    scroll-snap-type: x proximity;
+    overflow-x: scroll;
+    display: flex;
+    gap: 16px;
+    padding: 4px;
+}
+
+
+/* Steps Cards */
+
+.done{box-shadow: 0px 4px 0px #703EFF;}
+.doing{box-shadow: 0px 4px 0px #BF4F2C;}
+.waiting{box-shadow: 0px 4px 0px #818EB9;}
+
+
+
+.steps-cards{
+    scroll-snap-align: center;
+    min-width: 75vw;
+    min-height: 136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+    align-items: flex-start;
+    padding: 24px;
+
+    position: relative;
+
+    background: linear-gradient(180deg, #242732 15.62%, #303750 100%);
+    /* box-shadow: 0px 4px 0px #703EFF; */
+    border-radius: 24px;
+}
+
+.steps-cards__icon{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+
+
+
+
+
+
+/* Tokens Section */
+
+.tokens{
+    padding: 0 24px;
+}
+
+.tokens__title-container{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-items: center;
+}
+
+.progress-bar{
+    height: 24px;
+    overflow: hidden;
+    background: var(--color-footer);
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+.progress{
+    width: 25%;
+    height: 100%;
+    background: var(--color-primary);
+    
+}
+
+
+
+
+
+
+/* Team Cards */
+
+.team{
+padding: 0 24px;
+}
+
+.team h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.team__cards{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.team-cards{
+    height: 256px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #2F364F 100%);
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.team-cards--adrian{
+    background: url('../images/team-adrian.jpg') no-repeat center;
+}
+.team-cards--daniek{
+    background: url('../images/team-daniek.jpg') no-repeat center;
+}
+.team-cards--ikav{
+    background: url('../images/team-ikav.jpg') no-repeat center;
+}
+
+.team-cards{
+    background-size: cover;
+    background-position: center center;
+}
+
+
+footer{
+    background: var(--color-footer);
+    padding: 32px;
+}
+
+footer{
+    text-align: center;
+}
+
+
+
+
+
+@media (min-width: 700px) {
+
+
+nav{
+    margin-top: 24px;
+    padding: 0 40px;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.hero{
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project__info{
+    justify-content: center;
+}
+
+.project__image{
+    height: auto;
+    display: inline;
+}
+
+.social-cards{
+    max-width: calc( 50vw - 8px );
+}
+
+
+/* Featured Cards */
+
+.featured{
+    flex-direction: row;
+    gap: 16px;
+}
+
+.featured-cards{
+    background: linear-gradient(180deg, #242732 15.62%, #303750 100%);
+    box-shadow: 0px -8px 0px #7B4CFF;
+    border-radius: 24px;
+    padding: 16px 24px;
+}
+
+
+
+
+/* Steps Cards */
+
+.road-map{
+    /* max-width: calc(1440px - 144px); */
+}
+
+.road-map h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.steps-cards{
+    scroll-snap-align: unset;
+    width: 100%;
+    height: 176px;
+    max-width: calc( 50vw - 8px );
+}
+
+.steps-cards__icon{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.hero__social-cards{
+    flex-direction: row;
+}
+
+
+
+
+
+
+/* Tokens Section */
+
+.tokens{
+    width: 100%;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.tokens__title-container{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-items: center;
+}
+
+
+
+
+/* Team Cards */
+
+.team h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.team__cards{
+    flex-direction: row;
+    gap: 16px;
+}
+
+.team-cards{
+    width: 33vw;
+}
+
+
+}
+
+
+    
+@media (min-width: 1080px) {
+
+/* Hero */
+
+nav{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.hero{
+    max-width: 1440px;
+    flex-wrap: nowrap;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.project{
+    max-width: 856px;
+}
+
+.hero__social-cards{
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-cards{
+    min-height: calc( 50% - 8px );
+}
+
+
+
+
+/* Featured Cards */
+
+.featured{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.featured-01{
+    /* max-width: 416px; */
+}
+.featured-02{
+    /* flex-grow: 1; */
+    width: 900px;
+}
+    
+
+
+/* Steps Cards */
+
+.road-map{
+    width: 100vw;
+    max-width: 1440px;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.road-map h2{
+    text-align: center;
+}
+
+.road-map__container{
+    all: unset;
+/*     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    border: 1px red solid; */
+    
+
+/*     display: grid;
+    overflow-x: hidden;
+    overflow: hidden;
+    
+    gap: 1rem;
+    grid-auto-rows: 136px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 306px), 1fr));
+    padding: 4px 0; */
+}
+
+.steps-cards{
+    /* flex-basis: 306px; */
+    /* max-width: 250px; */
+    /* border: 1px red solid; */
+/*     flex-shrink: .5;
+    flex-grow: 1; */
+}
+
+
+
+
+
+
+
+
+
+.road-map__container{
+    scroll-snap-type: none;
+    overflow-x: hidden;
+    display: flex;
+    gap: 16px;
+    padding: 4px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+}
+
+
+/* Steps Cards */
+
+.steps-cards{
+    min-width: 306px;
+    /* border: 1px red solid; */
+    flex-basis: 306px;
+    max-width: calc(25% - 124px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tokens Section */
+
+.tokens{
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+
+
+/* Team Cards */
+
+.team{
+    padding: 0 72px;
+}
+
+.team h2{
+    text-align: center;
+}
+
+.team__cards{
+    justify-content: center;
+}
+
+.team-cards{
+    width: 306px;
+}
+
+
+}
