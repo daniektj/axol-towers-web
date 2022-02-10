@@ -18,6 +18,11 @@ html {
     --color-titles: #fff;
     --color-footer: #191A1F;
     --font-body: 'Roboto', sans-serif;
+    --color-featuredText: #8E66FF;
+}
+
+.featured-text{
+    color: var(--color-featuredText);
 }
 
 h1{

@@ -1,25 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #202128;
-  color: #818EB9;
-}
-h1 {
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 2.5rem;
+/* -------- Section Featured -------- */
+.project-featured{
+  width: calc(100vw - 48px);
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  /* border: 1px red solid; */
 }
 
+.project-featured__info{
+
+}
+
+.project-featured__info h3{
+  margin-bottom: 8px;
+}
+
+.project-featured__info p{
+  margin-bottom: 32px;
+}
+
+.project-featured__image{
+  display: none;
+}
+
+
+/* -------- Section Accordion -------- */
 .accordion {
   width: 90%;
   max-width: 1000px;
   margin: 2rem auto;
+  /* border: 1px red solid; */
+  margin-top: -16px;
 }
 .accordion-item {
   background-color: #242732;
@@ -60,8 +72,32 @@ h1 {
   border-image: linear-gradient(to right, transparent, #202128, transparent) 1;
 }
 
-@media(max-width:767px) {
-  html {
-    font-size: 14px;
+
+@media (min-width: 700px) {
+  
+  .project-featured{
+    width: calc(100vw - 64px);
   }
+
+}
+
+@media (min-width: 840px) {
+  
+  .project-featured{
+    flex-basis: calc(1440px - 144px);
+    max-height: 580px;
+    /* width: calc(1440px - 144px); */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-featured__info{
+    max-width: 50%;
+  }
+
+  .project-featured__image{
+    display: inline;
+  }
+
 }
